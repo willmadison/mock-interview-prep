@@ -22,10 +22,9 @@ func LongestUnique(subject string) string {
 
 	for i, c := range characters {
 		if lastSeenAt, present := charactersByLastIndex[c]; !present {
-			charactersByLastIndex[c] = i
 			currentWindow.end++
 		} else if currentWindow.in(lastSeenAt) {
-			w := window{lastSeenAt+1, i}
+			w := window{lastSeenAt + 1, i+1}
 
 			if currentWindow.len() > maxWindow.len() {
 				maxWindow = currentWindow
@@ -33,11 +32,13 @@ func LongestUnique(subject string) string {
 
 			currentWindow = w
 		}
+
+		charactersByLastIndex[c] = i
 	}
 
 	if currentWindow.len() > maxWindow.len() {
 		maxWindow = currentWindow
 	}
 
-	return subject[maxWindow.start : maxWindow.end]
+	return subject[maxWindow.start:maxWindow.end]
 }

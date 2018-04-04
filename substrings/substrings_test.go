@@ -16,11 +16,11 @@ func TestLongestUnique(t *testing.T) {
 			expected: "mo",
 		},
 		{
-			given: "modsy",
+			given: "mmmmmmmmmmmmmodsy",
 			expected: "modsy",
 		},
 		{
-			given: "longwall",
+			given: "llllllllllllllongwall",
 			expected: "longwa",
 		},
 		{
