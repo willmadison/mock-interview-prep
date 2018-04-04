@@ -36,7 +36,7 @@ func TestIsPalindrome(t *testing.T) {
 			actual := palindrome.IsA(tc.given)
 
 			if actual != tc.expected {
-				t.Errorf("got: %s; wanted: %s", actual, tc.expected)
+				t.Errorf("got: %v; wanted: %v", actual, tc.expected)
 			}
 		})
 	}

@@ -38,7 +38,7 @@ func TestLongestUnique(t *testing.T) {
 			actual := substrings.LongestUnique(tc.given)
 
 			if actual != tc.expected {
-				t.Errorf("got: %s; wanted: %s", actual, tc.expected)
+				t.Errorf("got: %v; wanted: %v", actual, tc.expected)
 			}
 		})
 	}
